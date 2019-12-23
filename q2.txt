@@ -1,0 +1,18 @@
+DECLARE
+n number;
+sal number;
+
+BEGIN
+n:=:Enterno;
+
+select salary into sal from employ where id=n;
+if (sal<10000)  then
+  dbms_output.put_line('Salary is less:'||sal);
+elsif (sal>10000) and (sal<30000) then
+  dbms_output.put_line('Salary is medium'||sal);
+else  
+  dbms_output.put_line('Salary is high'||sal);
+end if;
+
+END;
+    

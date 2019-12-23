@@ -1,0 +1,18 @@
+DECLARE
+n number;
+hra number:=0;
+da number:=0;
+net_sal number:=0;
+saL number;
+
+BEGIN
+n:=:Enterno;
+
+select salary into sal from employ where id=n;
+hra:=(10/100)*sal;
+da:=(60/100)*sal;
+net_sal:=sal+hra+da;
+  
+dbms_output.put_line('Salary is :'||net_sal); 
+
+END;

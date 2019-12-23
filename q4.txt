@@ -1,0 +1,13 @@
+DECLARE
+n NUMBER;
+r NUMBER :=0;
+s NUMBER :=0;
+BEGIN
+   n:=:Enterno;
+   while n>=1 LOOP
+    r:=mod(n,10);
+    s:=s*10+r;
+    n:=floor(n/10);
+   end loop;
+dbms_output.put_line('Reverse is:'||s);
+END;

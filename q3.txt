@@ -1,0 +1,25 @@
+DECLARE
+n number;
+dt number;
+
+BEGIN
+n:=:Enterno;
+
+select extract(month from hiredt) into dt from employ where id=n;
+dbms_output.put_line('Month  is:'||dt);
+
+case dt
+   when 1 then dbms_output.put_line('Month is january');
+   when 2 then dbms_output.put_line('Month is february');
+   when 3 then dbms_output.put_line('Month is march');
+   when 4 then dbms_output.put_line('Month is april');
+   when 5 then dbms_output.put_line('Month is may');
+   when 6 then dbms_output.put_line('Month is june');
+   when 7 then dbms_output.put_line('Month is july');
+   when 8 then dbms_output.put_line('Month is august');
+   when 9 then dbms_output.put_line('Month is september');
+   when 10 then dbms_output.put_line('Month is october');
+   when 11 then dbms_output.put_line('Month is November');
+   when 12 then dbms_output.put_line('Month is December');
+END case;
+END;
